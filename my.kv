@@ -1,0 +1,29 @@
+<Screen1>:
+    BoxLayout:
+        padding: "8sp"
+        orientation: "vertical"
+        MDLabel:
+            text: 'Экран 1'
+        MDRaisedButton:
+            text: 'Далее'
+            font_size: '40sp'
+            size_hint: 0.5, None
+            pos_hint: {"center_x": 0.5} 
+            on_press:
+                app.sm.transition.derection = "right"
+                app.sm.current = "Screen2"
+
+<Screen2>:
+    BoxLayout:
+        padding: "8sp"
+        orientation: "vertical"
+        MDLabel:
+            text: 'Экран 2'
+        MDRaisedButton:
+            text: 'Назад'
+            font_size: '40sp'
+            size_hint: 0.5, None
+            pos_hint: {"center_x": 0.5}
+            on_press:
+                app.sm.transition.derection = "left"
+                app.sm.current = "Screen1"
